@@ -1,0 +1,130 @@
+.project1 {
+    background: peachpuff;
+    font-family: Open Sans;
+   
+  	color: #222;
+}
+
+.heart {
+    position: absolute;
+    left: 58%; 
+    top: 1%; 
+    width: 90px; 
+    height: 90px; 
+}
+
+.main {
+    text-align: center;
+    color: crimson;
+    font-size: 50px;  
+}
+
+.rules {
+    text-align: center;
+    color: crimson;
+    font-size: 30px;
+      width: 300px;
+    height: 300px;
+    margin-left: 40%; 
+    margin-top: 0%; 
+}
+.picture {
+    width: 200px; 
+    height: 200px; 
+}
+
+.card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10 {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 50px; 
+}
+
+.card1, .card2, .card3, .card4, .card5 {
+     top: 55%;
+}
+
+.card6, .card7, .card8, .card9, .card10 {
+    top: 85%; 
+}
+
+
+.card1, .card6  {
+       left: 10%;
+}
+
+.card2, .card7 {
+    left: 30%;
+}
+
+.card3, .card8 {
+    left: 50%;
+}
+
+.card4, .card9 {
+    left: 70%;
+}
+.card5, .card10 {
+    left: 90%;   
+}
+
+
+
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    z-index: 20;
+}
+
+.card div {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: lightsalmon;  
+        text-align: center;
+        line-height: 200px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 2px;
+    }
+
+.card .back {
+        background: #222;
+        color: #FFF;
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+}
+
+label:hover .card {
+    -webkit-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+    box-shadow: 0 20px 20px rgba(50,50,50,.2);
+}
+
+input {
+    display: none;
+}
+
+:checked + .card {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+}
+
+label:hover :checked + .card {
+    transform: rotateX(160deg);
+    -webkit-transform: rotateX(160deg);
+    box-shadow: 0 20px 20px rgba(255,255,255,.2);
+}
